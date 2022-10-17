@@ -1,0 +1,21 @@
+--Create a Keychain store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT,price INTEGER, quantity INTEGER, price_to_make INTEGER );
+
+INSERT INTO store VALUES (1,"Blue keychain", 12, 6, 3);
+INSERT INTO store VALUES (2, "Brown keychain", 10, 3, 2);
+INSERT INTO store VALUES (3,"Pokemon keychain", 9, 2, 4);
+INSERT INTO store VALUES ( 4,"Holo keychain", 11, 4, 3);
+INSERT INTO store VALUES (5, "Picture keychian", 8, 1, 3);
+
+--display the datatbase order by price. 
+SELECT * FROM store 
+ORDER BY price; 
+
+--What keychain is less than or equeal to $9?
+SELECT * FROM store 
+WHERE price <=9;
+
+--What is the total sales amount? 
+SELECT SUM(price) 
+FROM store;
